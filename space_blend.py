@@ -122,7 +122,9 @@ def main():
     import sys
     import argparse
 
-    argv = sys.argv[4:]
+    argv = sys.argv
+    argv = argv[argv.index("--") + 1:]
+    print(argv)
 
 
     usage_text = "Run blender in background mode with this script:\n   blender -b -P " + __file__ + " -- [options]"
